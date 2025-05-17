@@ -22,12 +22,12 @@
     <meta name="description" content="After a simple example of Shor Code, this article will introduce stabilizer as a tool to build and analyze quantum error correction circuits. Why do we need stabilizers?One key point of quantum error">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quantum Error Correction: Stablizer">
-<meta property="og:url" content="http://example.com/2025/04/19/Quantum-Error-Correction-Stablizer/index.html">
+<meta property="og:url" content="http://example.com/2025/05/16/Quantum-Error-Correction-Stablizer/index.html">
 <meta property="og:site_name" content="Programming Diary">
 <meta property="og:description" content="After a simple example of Shor Code, this article will introduce stabilizer as a tool to build and analyze quantum error correction circuits. Why do we need stabilizers?One key point of quantum error">
 <meta property="og:locale">
 <meta property="og:image" content="https://github.com/Huaiyuan-Jing/BlogBase/blob/main/source/_posts/Quantum-Error-Correction-Stablizer/circ1.png?raw=true">
-<meta property="article:published_time" content="2025-04-19T04:11:57.632Z">
+<meta property="article:published_time" content="2025-05-16T05:25:39.314Z">
 <meta property="article:modified_time" content="2025-04-06T18:34:55.623Z">
 <meta property="article:author" content="HuaiYuan Jing">
 <meta property="article:tag" content="Quantum Computing">
@@ -156,7 +156,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                <span>Weblinks</span>
+                <span>Enlaces</span>
               </a>
             </li>
           
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-19 00:11" pubdate>
-          April 19, 2025 am
+        <time datetime="2025-05-16 01:25" pubdate>
+          May 16, 2025 am
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          290 wörter
+          290 palabras
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          3 minuten
+          3 minutos
         
       </span>
     
@@ -326,31 +326,31 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Quantum Error Correction: Stablizer</div>
-      <div>http://example.com/2025/04/19/Quantum-Error-Correction-Stablizer/</div>
+      <div>http://example.com/2025/05/16/Quantum-Error-Correction-Stablizer/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Beitragsautor</div>
+          <div>Autor</div>
           <div>HuaiYuan Jing</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Veröffentlicht am</div>
-          <div>April 19, 2025</div>
+          <div>Publicado el</div>
+          <div>May 16, 2025</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Urheberrechtshinweis</div>
+          <div>Licencia bajo</div>
           <div>
             
               
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                  <span class="hint--top hint--rounded" aria-label="BY - Atribución">
                     <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
@@ -370,19 +370,13 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/19/Quantum-Error-Correction-Shor-Code/" title="Quantum Error Correction: Shor Code">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Quantum Error Correction: Shor Code</span>
-                        <span class="visible-mobile">Vorheriger</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/19/%E9%87%8F%E5%AD%90%E7%BA%A0%E9%94%99-Shor-Code/" title="量子纠错: Shor Code">
-                        <span class="hidden-mobile">量子纠错: Shor Code</span>
-                        <span class="visible-mobile">Nächster</span>
+                      <a href="/2025/05/16/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/" title="FTQC量子资源计数器">
+                        <span class="hidden-mobile">FTQC量子资源计数器</span>
+                        <span class="visible-mobile">Siguiente</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -403,7 +397,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Inhaltsverzeichnis</span>
+    <span>Tabla de Contenidos</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -465,7 +459,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Buscar</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -473,7 +467,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">Palabra clave</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -694,7 +688,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+    <div class="noscript-warning">El blog funciona mejor con JavaScript habilitado</div>
   </noscript>
 </body>
 </html>

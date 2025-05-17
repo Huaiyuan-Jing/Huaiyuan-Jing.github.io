@@ -22,13 +22,13 @@
     <meta name="description" content="为什么需要FTQC资源计数器在NISQ(Noisy Intermediate-scale Quantum)设备上，衡量一个算法消耗的资源是非常直观的。通过算法使用的门的数量，物理比特的数量，电路的深度，物理硬件的各种错误率与保真度就可以大致的评估一个算法。但在FTQC(Fault Tolerant Quantum Computing)上事情却复杂一些。最关键的不同在于FTQC使用纠错码的方式通过设">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FTQC量子资源计数器">
-<meta property="og:url" content="http://example.com/2025/05/13/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/index.html">
+<meta property="og:url" content="http://example.com/2025/05/16/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/index.html">
 <meta property="og:site_name" content="Programming Diary">
 <meta property="og:description" content="为什么需要FTQC资源计数器在NISQ(Noisy Intermediate-scale Quantum)设备上，衡量一个算法消耗的资源是非常直观的。通过算法使用的门的数量，物理比特的数量，电路的深度，物理硬件的各种错误率与保真度就可以大致的评估一个算法。但在FTQC(Fault Tolerant Quantum Computing)上事情却复杂一些。最关键的不同在于FTQC使用纠错码的方式通过设">
 <meta property="og:locale">
 <meta property="og:image" content="https://github.com/Huaiyuan-Jing/BlogBase/blob/main/source/_posts/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/ChatGPT%20Image%202025%E5%B9%B45%E6%9C%8813%E6%97%A5%2015_26_54.png?raw=true">
-<meta property="article:published_time" content="2025-05-14T01:44:53.273Z">
-<meta property="article:modified_time" content="2025-05-14T21:57:13.399Z">
+<meta property="article:published_time" content="2025-05-16T05:24:47.459Z">
+<meta property="article:modified_time" content="2025-05-17T16:15:37.481Z">
 <meta property="article:author" content="HuaiYuan Jing">
 <meta property="article:tag" content="Quantum Computing">
 <meta name="twitter:card" content="summary_large_image">
@@ -156,7 +156,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                <span>Weblinks</span>
+                <span>Enlaces</span>
               </a>
             </li>
           
@@ -201,8 +201,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-13 21:44" pubdate>
-          May 13, 2025 pm
+        <time datetime="2025-05-16 01:24" pubdate>
+          May 16, 2025 am
         </time>
       </span>
     
@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          560 wörter
+          1.2k palabras
         
       </span>
     
@@ -224,7 +224,7 @@
         
         
         
-          5 minuten
+          11 minutos
         
       </span>
     
@@ -276,7 +276,15 @@
 <p><img src="https://github.com/Huaiyuan-Jing/BlogBase/blob/main/source/_posts/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/1.png?raw=true" srcset="https://github.com/Huaiyuan-Jing/BlogBase/blob/main/Sisyphus.jpg?raw=true" lazyload></p>
 <p>由此可见，一轮纠错所需要的时间是两个单比特门的时间加上四个双比特门的时间。同时，为了减少测量错误，FTQC通常每一个门都会执行多轮纠错来降低错误率。这样，总运行时间的估算公式就可以得到了：</p>
 <p>$$<br>T_{total} &#x3D; d_{rounds} * depth * (2 * T_{one} + 4 * T_{two})<br>$$</p>
-<h1 id="物理比特数量"><a href="#物理比特数量" class="headerlink" title="物理比特数量"></a>物理比特数量</h1><p>估算物理比特数量则是一个更加复杂的问题，在基于表面码的量子纠错机制中，物理比特的数量可以分为两个部分统计：1. 电路本身逻辑比特所用的物理比特的数量。2. T-Factory所使用的物理比特的数量。</p>
+<h1 id="物理比特数量"><a href="#物理比特数量" class="headerlink" title="物理比特数量"></a>物理比特数量</h1><p>估算物理比特数量则是一个更加复杂的问题，在基于表面码的量子纠错机制中，物理比特的数量可以分为两个部分统计：1. 电路本身逻辑比特所用的物理比特的数量。2. 特殊门工厂所使用的物理比特的数量。</p>
+<h2 id="码距"><a href="#码距" class="headerlink" title="码距"></a>码距</h2><p>一个纠错码的码距为$d$，等同于这个纠错码可以纠正$\lfloor\frac{d-1}{2}\rfloor$个错误。在表面码里，码距为$d$的表面码需要用$2d^2 - 1$个物理比特实现一个逻辑比特。所以纠错码使用多少码距决定了一个逻辑比特对应多少物理比特以及这个逻辑比特的错误率是多少。一般来说，$d$越大，需要的物理比特越多，纠错性能越好。</p>
+<p>从更低的错误率来说，码距当然是越高越好，但是物理量子比特数量是宝贵的资源。所以在FTQC资源计数器里，码距被设定为是“满足整个算法的期望错误数量&lt;1”的最小值。资源计数器通过stim模拟+倍增+二分的方法，来确定$d$的值具体是多少。</p>
+<h2 id="电路物理比特数量"><a href="#电路物理比特数量" class="headerlink" title="电路物理比特数量"></a>电路物理比特数量</h2><p>确定码距之后，电路物理比特数量的公式就很简单了：</p>
+<p>$$<br>N_{pqubits} &#x3D; N_{lqubits} * (2 * d^2 - 1)<br>$$</p>
+<h2 id="特殊门工厂物理比特数量"><a href="#特殊门工厂物理比特数量" class="headerlink" title="特殊门工厂物理比特数量"></a>特殊门工厂物理比特数量</h2><p>这个值是统计FTQC使用资源的最后一块拼图。对于任何一种纠错码来说，想要实现模拟所有量子比特门的操作，就必然会存在一个门是无法直接实现的。对于表面码来说这个操作就是T-gate。普通的表面码只能实现Clifford门的直接模拟，对于非Clifford门，表面码必须引进T Gate来进行近似模拟。目前在表面码里实现T-Gate的方法是T-Factory。每个T-Factory可以生成一个魔法量子态，让这个量子态和逻辑比特纠缠就可以实现近似T-Gate的操作。</p>
+<p>对于每一个T-factory来说，它需要15个逻辑比特，所以统计T-factory所需要的物理比特的数量就需要知道T-Factory的数量。而T-Factory的数量由T-Gate在电路里所需的频率决定。对于每个T-Factory，它需要生成一个魔法量子态的时间是$T_{Tstate}&#x3D;d_{rounds} * 10 * (2 * T_{one} + 4 * T_{two})$，所以T-Factory生成魔法量子态的速度为$T_{freq}&#x3D;\frac{1}{T_{Tstate}}$。用电路所需的T Gate的频率除以T Factory生成的速度向上取整，就可以得到T Factory所需的数量：$N_{TFactory} &#x3D; \frac{\frac{N_{TGate}}{T_{Total}}}{T_{freq}}$</p>
+<p> 最后，T Factory所需的物理比特数量即为$N &#x3D; N_{TFactory} * 15 * (2 * d^2 - 1)$</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>至此，所有FTQC量子算法所需要的资源都已经统计结束，具体的代码实现可以参考：<br><a target="_blank" rel="noopener" href="https://github.com/melody0123/QAOA4FTQC">https://github.com/melody0123/QAOA4FTQC</a></p>
 
                 
               </div>
@@ -302,31 +310,31 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>FTQC量子资源计数器</div>
-      <div>http://example.com/2025/05/13/FTQC量子资源计数器/</div>
+      <div>http://example.com/2025/05/16/FTQC量子资源计数器/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Beitragsautor</div>
+          <div>Autor</div>
           <div>HuaiYuan Jing</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Veröffentlicht am</div>
-          <div>May 13, 2025</div>
+          <div>Publicado el</div>
+          <div>May 16, 2025</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Urheberrechtshinweis</div>
+          <div>Licencia bajo</div>
           <div>
             
               
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                  <span class="hint--top hint--rounded" aria-label="BY - Atribución">
                     <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
@@ -346,13 +354,19 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2025/05/16/Quantum-Error-Correction-Stablizer/" title="Quantum Error Correction: Stablizer">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Quantum Error Correction: Stablizer</span>
+                        <span class="visible-mobile">Anterior</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/19/Quantum-Error-Correction-Shor-Code/" title="Quantum Error Correction: Shor Code">
+                      <a href="/2025/05/16/Quantum-Error-Correction-Shor-Code/" title="Quantum Error Correction: Shor Code">
                         <span class="hidden-mobile">Quantum Error Correction: Shor Code</span>
-                        <span class="visible-mobile">Nächster</span>
+                        <span class="visible-mobile">Siguiente</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -373,7 +387,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Inhaltsverzeichnis</span>
+    <span>Tabla de Contenidos</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -435,7 +449,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Buscar</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -443,7 +457,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">Palabra clave</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -664,7 +678,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+    <div class="noscript-warning">El blog funciona mejor con JavaScript habilitado</div>
   </noscript>
 </body>
 </html>
