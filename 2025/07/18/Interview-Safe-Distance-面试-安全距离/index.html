@@ -22,17 +22,17 @@
     <meta name="description" content="Problem 题面In a classroom with n seats, numbered from 0 to n-1, a student must choose the seat with the largest minimum distance to any other occupied seat. If multiple seats satisfy this condition, ch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Interview: Safe Distance | 面试: 安全距离">
-<meta property="og:url" content="http://example.com/2025/07/18/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/index.html">
+<meta property="og:url" content="https://huaiyuan-jing.github.io/2025/07/18/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/index.html">
 <meta property="og:site_name" content="Programming Diary">
 <meta property="og:description" content="Problem 题面In a classroom with n seats, numbered from 0 to n-1, a student must choose the seat with the largest minimum distance to any other occupied seat. If multiple seats satisfy this condition, ch">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/img/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/ChatGPT%20Image%20May%2028,%202025,%2011_37_43%20AM.png">
+<meta property="og:image" content="https://huaiyuan-jing.github.io/img/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/ChatGPT%20Image%20May%2028,%202025,%2011_37_43%20AM.png">
 <meta property="article:published_time" content="2025-07-18T18:56:58.185Z">
 <meta property="article:modified_time" content="2025-05-28T20:18:40.035Z">
 <meta property="article:author" content="HuaiYuan Jing">
 <meta property="article:tag" content="Data Structure">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/ChatGPT%20Image%20May%2028,%202025,%2011_37_43%20AM.png">
+<meta name="twitter:image" content="https://huaiyuan-jing.github.io/img/Interview-Safe-Distance-%E9%9D%A2%E8%AF%95-%E5%AE%89%E5%85%A8%E8%B7%9D%E7%A6%BB/ChatGPT%20Image%20May%2028,%202025,%2011_37_43%20AM.png">
   
   
   
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/Sisyphus.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"IzubcGArkHkhcKX0ejKCF5tN-MdYXbMMI","app_key":"Jq398PJV3mcQVeeSc4ddYVbp","server_url":"https://izubcgar.api.lncldglobal.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"huaiyuan-jing.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/Sisyphus.jpg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"IzubcGArkHkhcKX0ejKCF5tN-MdYXbMMI","app_key":"Jq398PJV3mcQVeeSc4ddYVbp","server_url":"https://izubcgar.api.lncldglobal.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -169,7 +169,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                <span>Weblinks</span>
+                <span>Links</span>
               </a>
             </li>
           
@@ -367,25 +367,25 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Interview: Safe Distance | 面试: 安全距离</div>
-      <div>http://example.com/2025/07/18/Interview-Safe-Distance-面试-安全距离/</div>
+      <div>https://huaiyuan-jing.github.io/2025/07/18/Interview-Safe-Distance-面试-安全距离/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
-          <div>Beitragsautor</div>
+          <div>Author</div>
           <div>HuaiYuan Jing</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
-          <div>Veröffentlicht am</div>
+          <div>Posted on</div>
           <div>July 18, 2025</div>
         </div>
       
       
       
         <div class="license-meta-item">
-          <div>Urheberrechtshinweis</div>
+          <div>Licensed under</div>
           <div>
             
               
@@ -414,7 +414,7 @@
                       <a href="/2025/07/18/FTQC%E9%87%8F%E5%AD%90%E8%B5%84%E6%BA%90%E8%AE%A1%E6%95%B0%E5%99%A8/" title="FTQC量子资源计数器">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">FTQC量子资源计数器</span>
-                        <span class="visible-mobile">Vorheriger</span>
+                        <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </article>
@@ -423,7 +423,7 @@
                     
                       <a href="/2025/07/18/Quantum-Error-Correction-Stablizer/" title="Quantum Error Correction: Stablizer">
                         <span class="hidden-mobile">Quantum Error Correction: Stablizer</span>
-                        <span class="visible-mobile">Nächster</span>
+                        <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -471,7 +471,7 @@
     <div id="toc">
   <p class="toc-header">
     <i class="iconfont icon-list"></i>
-    <span>Inhaltsverzeichnis</span>
+    <span>Table of Contents</span>
   </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
@@ -533,7 +533,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Suchen</h4>
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
         <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -541,7 +541,7 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Stichwort</label>
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
@@ -790,7 +790,7 @@
   
 
   <noscript>
-    <div class="noscript-warning">Blog funktioniert am besten mit aktiviertem JavaScript</div>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
   </noscript>
 </body>
 </html>
