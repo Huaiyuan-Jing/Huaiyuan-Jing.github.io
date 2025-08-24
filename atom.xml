@@ -6,7 +6,7 @@
   <link href="https://huaiyuan-jing.github.io/atom.xml" rel="self"/>
   
   <link href="https://huaiyuan-jing.github.io/"/>
-  <updated>2025-07-24T03:02:37.718Z</updated>
+  <updated>2025-08-24T17:32:42.769Z</updated>
   <id>https://huaiyuan-jing.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to render 3D to 2D pixel art in Godot</title>
+    <link href="https://huaiyuan-jing.github.io/posts/a9781501/"/>
+    <id>https://huaiyuan-jing.github.io/posts/a9781501/</id>
+    <published>2025-08-24T17:14:19.218Z</published>
+    <updated>2025-08-24T17:32:42.769Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-is-3d-to-2d-rendering"><a href="#What-is-3d-to-2d-rendering" class="headerlink" title="What is 3d to 2d rendering?"></a>What is 3d to 2d rendering?</h2><p>Just like its name, this technology is a way to process 3d models to 2d pictures automatically by computer.</p><h2 id="Why-3to2-rendering"><a href="#Why-3to2-rendering" class="headerlink" title="Why 3to2 rendering?"></a>Why 3to2 rendering?</h2><p>Take &#x2F;<em>Dead Cells</em>&#x2F; as example, we can see many fluent character motions under pixel style. Like the following：</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;What-is-3d-to-2d-rendering&quot;&gt;&lt;a href=&quot;#What-is-3d-to-2d-rendering&quot; class=&quot;headerlink&quot; title=&quot;What is 3d to 2d rendering?&quot;&gt;&lt;/a&gt;What</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Algorithm" scheme="https://huaiyuan-jing.github.io/tags/Algorithm/"/>
+    
+    <category term="Godot" scheme="https://huaiyuan-jing.github.io/tags/Godot/"/>
+    
+  </entry>
   
   <entry>
     <title>How to manage email like an Advanced-Linux-User</title>

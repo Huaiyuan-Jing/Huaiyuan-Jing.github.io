@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>How to render 3D to 2D pixel art in Godot</title>
+    <link href="/posts/a9781501/"/>
+    <url>/posts/a9781501/</url>
+    
+    <content type="html"><![CDATA[<h2 id="What-is-3d-to-2d-rendering"><a href="#What-is-3d-to-2d-rendering" class="headerlink" title="What is 3d to 2d rendering?"></a>What is 3d to 2d rendering?</h2><p>Just like its name, this technology is a way to process 3d models to 2d pictures automatically by computer.</p><h2 id="Why-3to2-rendering"><a href="#Why-3to2-rendering" class="headerlink" title="Why 3to2 rendering?"></a>Why 3to2 rendering?</h2><p>Take &#x2F;<em>Dead Cells</em>&#x2F; as example, we can see many fluent character motions under pixel style. Like the following：</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Algorithm</tag>
+      
+      <tag>Godot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>How to manage email like an Advanced-Linux-User</title>
     <link href="/posts/93ebbc6b/"/>
     <url>/posts/93ebbc6b/</url>
