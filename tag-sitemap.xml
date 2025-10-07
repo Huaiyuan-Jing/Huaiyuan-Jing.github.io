@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://huaiyuan-jing.github.io/tags/Fedora/</loc>
+        <lastmod>2025-10-07T02:24:15.781Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://huaiyuan-jing.github.io/tags/Linux/</loc>
+        <lastmod>2025-10-07T02:24:15.781Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://huaiyuan-jing.github.io/tags/Algorithm/</loc>
         <lastmod>2025-09-21T23:34:07.472Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,13 +40,6 @@
     <url>
         <loc>https://huaiyuan-jing.github.io/tags/Security/</loc>
         <lastmod>2025-09-05T22:01:06.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://huaiyuan-jing.github.io/tags/Linux/</loc>
-        <lastmod>2025-09-05T22:01:00.825Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
